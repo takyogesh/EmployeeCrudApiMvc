@@ -1,8 +1,6 @@
 ﻿using ConsumeEmployeeWebApiWebApp_29_07.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
 
 namespace ConsumeEmployeeWebApiWebApp_29_07.Controllers
 {
@@ -76,7 +74,6 @@ namespace ConsumeEmployeeWebApiWebApp_29_07.Controllers
         {
             try
             {
-
                 HttpResponseMessage response = httpClient.DeleteAsync(baseAddress + "Employees/Delete/id?id=" + id).Result;
                 if(response.IsSuccessStatusCode)
                 {
